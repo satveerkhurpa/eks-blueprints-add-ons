@@ -22,7 +22,7 @@ spec:
             create: false
         {{- toYaml .Values.awsLoadBalancerController | nindent 10 }}
   destination:
-    server: {{ .Values.clusterName }}
+    server: https://kubernetes.default.svc
     namespace: kube-system
   syncPolicy:
     automated:
